@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mabar Free Fire</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS (Desain) --- */
+        
+        :root {
+            --bg-color: #121212;
+            --card-color: #1e1e1e;
+            --text-color: #f0f0f0;
+            --primary-color: #FFA500; /* Warna oranye khas FF */
+            --secondary-color: #333;
+            --text-muted: #aaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: var(--card-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--secondary-color);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* --- [UPDATE] CSS BARU UNTUK INFO PLAYER --- */
+        .player-info {
+            text-align: center;
+        }
+
+        .rank-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--secondary-color);
+            padding-bottom: 8px;
+            margin: 25px 0 15px 0;
+            text-align: left; /* Biar rata kiri */
+        }
+        
+        .rank-title.first {
+            margin-top: 0; /* Judul pertama tidak perlu margin atas */
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-around; /* Menyebar BR dan CS */
+            align-items: center;
+            width: 100%;
+        }
+        
+        .info-row.single {
+            justify-content: center; /* Untuk Role */
+        }
+        
+        .info-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .info-item span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        /* --- [AKHIR UPDATE] --- */
+
+
+        /* Form Mabar */
+        .mabar-form p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        #ff-id {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #ff-id:focus {
+            border-color: var(--primary-color);
+        }
+
+        #send-wa {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            color: #111;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #send-wa:hover {
+            background-color: #ffb733;
+            box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>MABAR YOK!</h1>
+            <p>Lagi cari temen push rank Free Fire</p>
+        </header>
+
+        <div class="card">
+            <h2>My Profile</h2>
+            <div class="player-info">
+                
+                <h3 class="rank-title first">Role Utama</h3>
+                <div class="info-row single">
+                    <div class="info-item">
+                        <p>Role</p>
+                        <span>Rusher</span>
+                    </div>
+                </div>
+
+                <h3 class="rank-title">Rank Sekarang</h3>
+                <div class="info-row">
+                    <div class="info-item">
+                        <p>BR Rank</p>
+                        <span>Platinum IV</span>
+                    </div>
+                    <div class="info-item">
+                        <p>CS Rank</p>
+                        <span>Diamond I</span>
+                    </div>
+                </div>
+                
+                <h3 class="rank-title">Rank Tertinggi</h3>
+                <div class="info-row">
+                    <div class="info-item">
+                        <p>BR Rank</p>
+                        <span>Master</span>
+                    </div>
+                    <div class="info-item">
+                        <p>CS Rank</p>
+                        <span>Grandmaster</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card mabar-form">
+            <h2>Kirim Undangan</h2>
+            <p>Kalau mau mabar, masukin ID FF kamu di bawah. Nanti aku yang add. Langsung kirim ke WA aku ya!</p>
+            
+            <div class="input-group">
+                <input type="text" id="ff-id" placeholder="Tulis ID Free Fire kamu...">
+            </div>
+            
+            <button id="send-wa">Kirim ID ke WhatsApp</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 - Dibuat untuk mabar.</p>
+        </footer>
+    </div>
+
+    <script>
+        // --- JavaScript (Fungsi) ---
+
+        // 1. Tangkap tombol dan input field
+        const tombolKirim = document.getElementById('send-wa');
+        const inputID = document.getElementById('ff-id');
+
+        // 2. Tambahkan event listener saat tombol diklik
+        tombolKirim.addEventListener('click', function() {
+            
+            // --- Nomor WA Tujuan (Sudah diatur sesuai permintaan kamu) ---
+            const nomorWAtujuan = '6281542192623';
+            // -----------------------------------------------------------
+
+            // Ambil ID dari input
+            const idFF = inputID.value;
+
+            // Validasi: Cek apakah ID sudah diisi
+            if (idFF.trim() === '') {
+                alert('Hei, ID Free Fire kamu belum diisi!');
+                inputID.focus(); // Fokuskan kembali ke input
+                return; // Hentikan fungsi
+            }
+
+            // Buat template pesan WhatsApp
+            const pesanWA = `
+Halo, aku mau mabar FF nih.
+ID aku: ${idFF}
+
+Tolong di-add ya. Makasih!
+            `;
+
+            // Buat URL WhatsApp
+            const url = `https://wa.me/${nomorWAtujuan}?text=${encodeURIComponent(pesanWA)}`;
+
+            // Buka URL di tab baru
+            window.open(url, '_blank');
+        });
+    </script>
+
+</body>
+</html>
